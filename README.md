@@ -56,6 +56,10 @@ _Clone with SSH: Open Terminal and run "git clone git@github.com:StephenGrider/R
 
 _Go to project directory and run "npm install" to install all project dependencies_
 
+_Create a new repo on github (reduxsimplestarter)_
+
+_Once this has been setup, edit config file within .git folder and change [remote "origin"] URL to_ https://github.com/altcoinrockerxyz/reduxsimplestarter.git
+
 **Lecture 216: Project Setup**
 
 _The application: A video player of sorts modeled on YouTube (YT)._
