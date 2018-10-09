@@ -26,6 +26,8 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 > npm start
 ```
 
+_The following is a continuation on lessons learned related to Solidity dApp (found on SolidityBasics repo) development as taught by StephenGrider via Udemy._
+
 **Lecture 214: Purpose of Boilerplate Projects**
 
 Photo - https://imgur.com/fI1ttKG
