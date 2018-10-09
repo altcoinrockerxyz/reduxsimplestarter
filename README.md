@@ -106,5 +106,8 @@ A component is a collection of JavaScript functions that produce HTML.
 _Create an error filled example code, to understand how to Troubleshoot (red texts popping up on browser console)_
 
 _JSX_ is a subset or dialect of JavaScript that allows us to write what looks like HTML inside of our JavaScript but is really, behind the scenes, just JavaScript.
+<<<<<<< HEAD
 
 **Lecture 218: More on JSX**
+=======
+>>>>>>> efd78c4a5e2e1c6284c9f381801f7e7fc1806cd4
