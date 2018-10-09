@@ -78,3 +78,29 @@ Video Title and Description below Opened video.
 This will startup the boilerplate package and run a local server (http://localhost:8080/webpack-dev-server or http://localhost:8080)
 
 **Lecture 217: JSX**
+
+The boilerplate app has an index.html file that contains reference to a JS script called _bundle.js_. This JS is a compiled JavaScript for our entire application (the various JS files within the Source (_src_) folder).
+
+_Webpack and Babel takes all these files and makes them available as bundle.js_
+
+The index.html file is the default html shown (_being run_) by default when accessing http://localhost:8080
+
+NOTE: The _app.js_ file within components folder contains the default content shown when placing the _<div class="container"></div>_ tag.
+
+To really learn, delete the Source folder ( https://imgur.com/tK3MFxn ) and start from scratch.
+
+Re-create the Source (src) folder and an index.js inside.
+
+Restart the server (Ctrl - Q, then run _npm start_)
+
+_What is React?_
+
+A JavaScript library that is used to produce HTML that is shown to user on a web browser. When we write a React code, we are writing individual components or views.
+
+Components - in this context - are snippets of codes that produce HTML. When we write React codes, we write multiple different components. We nest these components together by placing one inside the other in different fashions - to make really complex applications relatively simple.
+
+A component is a collection of JavaScript functions that produce HTML.
+
+_Create an error filled example code, to understand how to Troubleshoot (red texts popping up on browser console)_
+
+_JSX_ is a subset or dialect of JavaScript that allows us to write what looks like HTML inside of our JavaScript but is really, behind the scenes, just JavaScript.
