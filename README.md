@@ -164,3 +164,8 @@ RULE: So for each component, there will exist a separate file. _ONE COMPONENT PE
 1.  Signup for a YT API key (https://console.developers.google.com/?pli=1) > Youtube Data API v3
     https://imgur.com/G26H75x
 2.  Install a small package that makes searching simple -- an NPM package called Youtube API search. Run _npm install --save youtube-api-search_
+
+**Lecture 225: Export Statements**
+
+Start by working on the search bar.
+Discussions on Exporting Modules, Classes and States
