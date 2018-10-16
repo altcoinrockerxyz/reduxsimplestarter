@@ -142,3 +142,19 @@ Create and instance of the component
 _Note:_ As a rule of thumb, to make an instance, we just have to wrap a class (of a component) with JSX tags. _Whenever we try to make use of a component, wrap with JSX tags._
 
 Problem encountered: We're telling ReactDOM to put it on the page, but we're not actually telling React where to put the component on the page... SO, it is trying to put it, but also requires a second argument - reference to an existing DOM node on the page or a target DOM node (container).
+
+**Lecture 223: Component Structure**
+
+Goal: How to structure application with different components
+
+Remember: A Component -- is a function or an object that returns some amount of HTML.
+
+There could be various different components for each section of the page (i.e. search bar, video title/description, list of videos)
+
+RULE: So for each component, there will exist a separate file. _ONE COMPONENT PER FILE._
+
+1.  A Search bar (search_bar.js)
+2.  A Video player and the Title/Description (video_detail.js)
+3.  A Single Video preview (to the right, presented multiple times) (video_list_item.js)
+4.  A component that will render a list of the video details (we can always NEST components with each other) (video_list.js)
+5.  One big over-all component that will contain all the components listed above.
