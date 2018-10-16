@@ -1,6 +1,8 @@
 import React from "react"; // give me access to React,
 // which is installed in our dependencies library
 
+import ReactDOM from "react-dom"; // L220: give access to ReactDOM
+
 // Create a new component. This component should produce
 // some HTML. NOTE: const is an ES6 or ES2016 syntax
 const App = function() {
@@ -11,4 +13,4 @@ const App = function() {
 // on the page (in the DOM))
 
 // L219: Try out with a wrong set of codes
-React.render(App); // ask react to render App
+ReactDOM.render(App); // ask react to render App

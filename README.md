@@ -124,3 +124,11 @@ When we write ES6 code, we have access to JavaScript modules - which encapsulate
 Codes that we declared and other files we produced will have zero contact with the file we are working on, unless we explicitly state that we want access to some other file on the same or another location.
 
 So even tho React is already installed, we still need to explicitly state that we want to access to REACT inside of the file we are working on.
+
+**Lecture 220: ReactDOM vs React**
+
+React started to diverge into two separate libraries:
+
+1.  The Core React Library (who knows how to work with react components).
+
+2.  The functionality to actually render a component and insert into a DOM is on a separate library called ReactDOM.
