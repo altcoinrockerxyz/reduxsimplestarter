@@ -3,6 +3,9 @@ import React from "react"; // give me access to React,
 
 import ReactDOM from "react-dom"; // L220: give access to ReactDOM
 
+// L224: Declare a variable to hold the API Key
+const API_KEY = "AIzaSyA-svHXpb-3lJEZD15Q6rKNbAifXHkEsQg";
+
 // Create a new component. This component should produce
 // some HTML. NOTE: const is an ES6 or ES2016 syntax
 // const App = function() {

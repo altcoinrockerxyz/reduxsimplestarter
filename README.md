@@ -158,3 +158,9 @@ RULE: So for each component, there will exist a separate file. _ONE COMPONENT PE
 3.  A Single Video preview (to the right, presented multiple times) (video_list_item.js)
 4.  A component that will render a list of the video details (we can always NEST components with each other) (video_list.js)
 5.  One big over-all component that will contain all the components listed above.
+
+**Lecture 224: Youtube Search API Signup**
+
+1.  Signup for a YT API key (https://console.developers.google.com/?pli=1) > Youtube Data API v3
+    https://imgur.com/G26H75x
+2.  Install a small package that makes searching simple -- an NPM package called Youtube API search. Run _npm install --save youtube-api-search_
