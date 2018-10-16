@@ -169,3 +169,23 @@ RULE: So for each component, there will exist a separate file. _ONE COMPONENT PE
 
 Start by working on the search bar.
 Discussions on Exporting Modules, Classes and States
+
+**Lecture 226: Class Based Components**
+
+Create a component - not with a function - but with an ES6 class.
+
+A Class component - if you want your component to have some type of internal record keeping, some ability for it to be aware of itself and what's happened to it since it's been rendered.
+
+Because users are going to be typing into this input, our component has to be able to make other parts of the application that the user typed something and what that something is.
+
+Refactor from a functional component to a class-based component.
+
+_What's going on?_
+
+The SearchBar was previously made as a dumb component with no ability to communicate with other components effectively. We promoted the SearchBar's state from a functional component to a Class-based component.
+
+When we write a class based component, we write Class, then the name of component, then we extend react.Component to it.
+
+Whenever we create a class component, we must always define a render method and return some JSX - otherwise we'll end up with an error.
+
+To render class-based component, it's totally the same as the functional components - we just need to _export_ the component via component name, and we just write the component name on index.js inside some JSX tags.
