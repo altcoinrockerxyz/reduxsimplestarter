@@ -112,3 +112,15 @@ _JSX_ is a subset or dialect of JavaScript that allows us to write what looks li
 We assigned _const_ instead of _var_ because the variable _App_'s value will not change.
 
 _NOTE:_ JSX makes our code more legible
+
+**Lecture 219: Import Statements**
+
+Take JSX that's been returned by our component and make sure it ends up in our DOM so users can see it. This is simple in theory, but in practice it involves codes that are quite confusing.
+
+React library needs to be defined..?
+
+When we write ES6 code, we have access to JavaScript modules - which encapsulates the idea that all the codes we write in separate files are silo'ed\_ or separated from other codes that we write or other libraries that we install on our project.
+
+Codes that we declared and other files we produced will have zero contact with the file we are working on, unless we explicitly state that we want access to some other file on the same or another location.
+
+So even tho React is already installed, we still need to explicitly state that we want to access to REACT inside of the file we are working on.
