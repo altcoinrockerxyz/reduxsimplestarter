@@ -189,3 +189,12 @@ When we write a class based component, we write Class, then the name of componen
 Whenever we create a class component, we must always define a render method and return some JSX - otherwise we'll end up with an error.
 
 To render class-based component, it's totally the same as the functional components - we just need to _export_ the component via component name, and we just write the component name on index.js inside some JSX tags.
+
+**Lecture 227: Handling User Events**
+
+We will focus to have the ability to detect whenever a user enters something into the input box, and what the user typed.
+
+Handling events in React has two steps:
+
+1.  We declare an event handler - a function that should be run whenever the event occurs.
+2.  We pass the event handler to the element that we want to monitor for events.

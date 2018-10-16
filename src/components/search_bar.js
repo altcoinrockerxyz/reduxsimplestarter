@@ -19,8 +19,23 @@ const SearchBar = () => {
 class SearchBar extends Component {
   // A method to return JSX (a render method)
   render() {
-    return <input />;
+    return <input onChange={event => console.log(event.target.value)} />; // L227: Pass the result of the event handler
   }
+
+  // L227: define the event handler that monitors and captures changes to the input box
+  // add one argument or event object, which describes
+  // the context or info about the event that occured
+  // check what happens by doing a console.log();
+
+  // L227: Use an error function to condense and make it look more compact
+
+  //  }
+
+  /* Delete the whole arrowHandler and just type it within the returned method 
+  onInputChange(event) {
+    console.log(event.target.value);
+  }
+  */
 }
 
 export default SearchBar;
