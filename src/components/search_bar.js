@@ -17,10 +17,22 @@ const SearchBar = () => {
 // that React.Component has
 // class SearchBar extends React.Component { <- change to ES6 by adding Component on TOP
 class SearchBar extends Component {
+  // L228
+  constructor(props) {
+    super(props); // call the parent method via super()
+
+    this.state = { term: "" }; // whenever we use state,
+    // we initialize it by creating a new object and assigning it to this.state
+    // the object we pass will also contain properties (term, in this case)
+    // that we want to record on the state
+  }
+
   // A method to return JSX (a render method)
+  /*
   render() {
     return <input onChange={event => console.log(event.target.value)} />; // L227: Pass the result of the event handler
   }
+  */
 
   // L227: define the event handler that monitors and captures changes to the input box
   // add one argument or event object, which describes
@@ -31,11 +43,35 @@ class SearchBar extends Component {
 
   //  }
 
-  /* Delete the whole arrowHandler and just type it within the returned method 
+  /* Delete the whole arrowHandler and just type it within the returned method
   onInputChange(event) {
     console.log(event.target.value);
   }
   */
+
+  // L229
+  /*
+  render() {
+    return (
+      <div>
+        <input
+          onChange={event => this.setState({ term: event.target.value })}
+        />
+        &nbsp;Rewrite Value of the Input: {this.state.term}
+      </div>
+    ); // L227: Pass the result of the event handler
+  }*/
+
+  // L229
+  render() {
+    return (
+      <div>
+        <input
+          onChange={event => this.setState({ term: event.target.value })}
+        />
+      </div>
+    ); // L227: Pass the result of the event handler
+  }
 }
 
 export default SearchBar;

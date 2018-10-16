@@ -198,3 +198,25 @@ Handling events in React has two steps:
 
 1.  We declare an event handler - a function that should be run whenever the event occurs.
 2.  We pass the event handler to the element that we want to monitor for events.
+
+**Lecture 228: Introduction to State**
+
+A State - is a plain JavaScript object that is used to record and react to user events. Each class-based components that we define has its own state object. Whenever a component state is changed, the component immediately re-renders and also forces all its children to re-render as well.
+
+Before we ever use State inside of a component, we need to initialize the State object. To initialize, we set the property state to a plain JavaScript object inside of class's constructor method.
+
+_Remember: Functional components DO NOT HAVE STATE, only class-based components do._
+
+All JavaScript classes have a special function called 'constructor'. It is the first and only function called automatically whenever a new instance of a class is created. It is reserved for doing some setup inside of our Class like initializing vars or state.
+
+**Lecture 229: State Continued**
+
+A plain JS object that exists on any component that is a Class based component. Each instance of a class based component has its own copy of state. We initialize a state by defining a constructor method and setting the state as _this.state_ inside of it.
+
+Updating a state is different than creating it.
+
+Only inside the constructor function do we change our state (i.e. this.state = blah). Everywhere else inside of all our components, we instead use a method called _this.setState_.
+
+Using setState is what really allows us to maintain continuity while React performs a lot of processes in the background.
+
+Why we're doing this?
