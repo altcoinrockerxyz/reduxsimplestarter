@@ -129,6 +129,16 @@ So even tho React is already installed, we still need to explicitly state that w
 
 React started to diverge into two separate libraries:
 
-1.  The Core React Library (who knows how to work with react components).
+1.  The Core React Library (who knows how to work with react components -- create and manage).
 
-2.  The functionality to actually render a component and insert into a DOM is on a separate library called ReactDOM.
+2.  The functionality to actually render a component and insert into a DOM is on a separate library called ReactDOM (used to interact with the actual DOM).
+
+**Lecture 221: Component Instances**
+
+Create and instance of the component
+
+**Lecture 222: Render Targets**
+
+_Note:_ As a rule of thumb, to make an instance, we just have to wrap a class (of a component) with JSX tags. _Whenever we try to make use of a component, wrap with JSX tags._
+
+Problem encountered: We're telling ReactDOM to put it on the page, but we're not actually telling React where to put the component on the page... SO, it is trying to put it, but also requires a second argument - reference to an existing DOM node on the page or a target DOM node (container).

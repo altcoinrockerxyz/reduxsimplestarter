@@ -5,7 +5,10 @@ import ReactDOM from "react-dom"; // L220: give access to ReactDOM
 
 // Create a new component. This component should produce
 // some HTML. NOTE: const is an ES6 or ES2016 syntax
-const App = function() {
+// const App = function() {
+const App = () => {
+  // L222: Replace the initial var and function declaration
+  // with ES6 version
   return <div>Hi!</div>; // this HTML stuff is called JSX
 };
 
@@ -13,4 +16,7 @@ const App = function() {
 // on the page (in the DOM))
 
 // L219: Try out with a wrong set of codes
-ReactDOM.render(App); // ask react to render App
+ReactDOM.render(<App />, document.querySelector(".container"));
+// L221: ask react to render App <App></App> is the same as <App />
+// L222: input the second argument where the instance is supposed to be placed within the DOM
+// all we have to do is pass a reference to the container
