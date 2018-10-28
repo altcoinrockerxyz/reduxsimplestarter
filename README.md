@@ -270,3 +270,8 @@ Goal: Flush out the search process
 React has a _Downwards Data Flow_ that would be responsible to accomplish the task.
 
 Downwards Data Flow means that _only the most parent component of the application (index.js)_ should be responsible for _fetching data_ be it from API or Flex framework or Redux.
+
+**Lecture 233: Refactoring Functional Components to Class Components**
+
+Goal: Examine the app component (index.js) closely
+Set the result of search on State, that means the need to setup the Constructor function

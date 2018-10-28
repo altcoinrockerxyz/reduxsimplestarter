@@ -1,5 +1,6 @@
-import React from "react"; // give me access to React,
+import React, { Component } from "react"; // give me access to React,
 // which is installed in our dependencies library
+// L233: Import Component
 
 import ReactDOM from "react-dom"; // L220: give access to ReactDOM
 
@@ -12,17 +13,20 @@ import SearchBar from "./components/search_bar";
 // L224: Declare a variable to hold the API Key
 const API_KEY = "AIzaSyA-svHXpb-3lJEZD15Q6rKNbAifXHkEsQg";
 
-/* 
+/*
 
 L232
-Call it and the first argument is going to be 
-an Object with a search term and an API key 
-*/
+Call it and the first argument is going to be
+an Object with a search term and an API key
+
 
 YTSearch({ key: API_KEY, term: "surfboards" }, function(data) {
   console.log(data);
 });
 
+*/
+
+/*
 // Create a new component. This component should produce
 // some HTML. NOTE: const is an ES6 or ES2016 syntax
 // const App = function() {
@@ -35,6 +39,36 @@ const App = () => {
     </div> // this HTML stuff is called JSX
   );
 };
+*/
+
+// L233: Redefine const into class and extend (extends) Component
+// Going from functional to a class based component
+class App extends Component {
+  // L233: Setup the Constructor
+  constructor(props) {
+    super(props);
+
+    // L233: Result is an array
+    this.state = { videos: [] };
+
+    // L233: Get some data pop up right away, move YTSearch in here
+    YTSearch({ key: API_KEY, term: "surfboards" }, videos => {
+      // (videos) => is the same as function(videos)
+      // console.log(data); Update this.state with a new list of videos
+      this.setState({ videos });
+      // ^ line is the same as this.setState({ videos: videos });
+    });
+  }
+
+  // L233: Add a render method
+  render() {
+    return (
+      <div>
+        <SearchBar />
+      </div> // this HTML stuff is called JSX
+    );
+  }
+}
 
 // Take this component's generated HTML and put it
 // on the page (in the DOM))
