@@ -220,3 +220,53 @@ Only inside the constructor function do we change our state (i.e. this.state = b
 Using setState is what really allows us to maintain continuity while React performs a lot of processes in the background.
 
 Why we're doing this?
+
+**Lecture 230: Controlled Components**
+
+We only update our state by calling _this.setState_. The only time we ever manually change it using _this.state =_ is inside of the _constructor_.
+
+Right now, we're gonna take the idea of the state one step further by creating a _controlled field_ or _controlled input/form-element_
+
+It is a form element (like an input) whose value is set by the state rather than the other way around.
+
+Task: Update the text input to get its _value_ from the _state_.
+
+https://imgur.com/JcDhwJT
+
+**Lecture 231: Breather and Review**
+
+## ES6 Topics Discussed
+
+Classes
+Arrow Functions
+import Statements
+Export Statements
+
+## Other Things Discussed
+
+Signed up for YouTube API
+
+## App's Current Structure
+
+1.  Apps start inside index.js, where we define a base component called App
+2.  Index imports component SearchBar into it, and then renders it inside its App component
+    -- _App is a functional component because it doesn't have any concept of state_
+    -- The SearchBar and App Components demonstrate two different types of components in React (a Class-based, and a Functional-based component)
+
+Class-based Components are used whenever we have a component that needs to be aware of state in some fashion (i.e. keep track of state)
+
+Function-based Components are used whenever we're just taking in some information and spitting out some JSX.
+
+SearchBar component makes use of _state_ by updating the user input whenever the state changes. Whenever the user enters some text, we _first update the state_, which causes the entire component to re-render. We made the component (the input element) a controlled component by telling it to receive its value from _state_.
+
+**Lecture 232: Youtube Search Response**
+
+Goal: Flush out the search process
+
+- Make a call to the YT API to get a result
+- Where to fetch list of videos
+- What component should be responsible for grabbing that info
+
+React has a _Downwards Data Flow_ that would be responsible to accomplish the task.
+
+Downwards Data Flow means that _only the most parent component of the application (index.js)_ should be responsible for _fetching data_ be it from API or Flex framework or Redux.
