@@ -283,3 +283,16 @@ Set the result of search on State, that means the need to setup the Constructor 
 - this is done by passing the data from Parent Component to Child Component by defining a property in the JSX tag.
 - In a functional component, the Props object is an argument.
 - In a class-based component, Props are available anywhere in any method we define as this.props
+
+**Lecture 235: Building Lists with Map**
+
+IMPORTANT: Use built-in iterator helper (such as Map) rather than For Loops
+
+Example JS on browser console:
+
+var array = [1, 2, 3];
+array.map(function(number) { return number \* 2} );
+
+OR
+
+array.map(function(number) { return '<div>' + number + '</div>'} );
