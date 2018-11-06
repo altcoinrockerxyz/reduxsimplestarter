@@ -296,3 +296,10 @@ array.map(function(number) { return number \* 2} );
 OR
 
 array.map(function(number) { return '<div>' + number + '</div>'} );
+
+**Lecture 236: List Item Keys**
+
+- The last lesson produced a Warning with regards to the need for unique 'key' props.
+- React has a bunch of logic built into it to optimize the process of building a list
+- React builds a list and (under the hood) gives it a unique ID
+- For this instance, we could use YT search result's etag as key.

@@ -5,7 +5,7 @@ const VideoList = props => {
   const videoItems = props.videos.map(video => {
     // return a video list item and
     // pass it the video as prop name video
-    return <VideoListItem video={video} />;
+    return <VideoListItem key={video.etag} video={video} />;
   });
 
   // L234: values will arrive as an argument to this function
