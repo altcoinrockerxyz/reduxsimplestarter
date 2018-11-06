@@ -275,3 +275,11 @@ Downwards Data Flow means that _only the most parent component of the applicatio
 
 Goal: Examine the app component (index.js) closely
 Set the result of search on State, that means the need to setup the Constructor function
+
+**Lecture 234: Props**
+
+- Make use of Bootstrap styling for the Video List (video_list.js) component
+- VideoList (child component) needs to access the data from App (the parent component)
+- this is done by passing the data from Parent Component to Child Component by defining a property in the JSX tag.
+- In a functional component, the Props object is an argument.
+- In a class-based component, Props are available anywhere in any method we define as this.props

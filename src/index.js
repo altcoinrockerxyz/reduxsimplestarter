@@ -10,6 +10,9 @@ import YTSearch from "youtube-api-search";
 // LL225: import the exported function from search_bar.js
 import SearchBar from "./components/search_bar";
 
+// L234: Import video_list.js
+import VideoList from "./components/video_list";
+
 // L224: Declare a variable to hold the API Key
 const API_KEY = "AIzaSyA-svHXpb-3lJEZD15Q6rKNbAifXHkEsQg";
 
@@ -61,10 +64,13 @@ class App extends Component {
   }
 
   // L233: Add a render method
+  // render the search bar via this JSX tag
+  // L234: render video list via a JSX tag, pass data much like passing props in React
   render() {
     return (
       <div>
         <SearchBar />
+        <VideoList videos={this.state.videos} />
       </div> // this HTML stuff is called JSX
     );
   }

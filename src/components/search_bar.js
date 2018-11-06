@@ -21,7 +21,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props); // call the parent method via super()
 
-    this.state = { term: "Initial value of term" }; // whenever we use state,
+    this.state = { term: "" }; // whenever we use state,
     // we initialize it by creating a new object and assigning it to this.state
     // the object we pass will also contain properties (term, in this case)
     // that we want to record on the state
