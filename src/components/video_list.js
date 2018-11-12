@@ -5,6 +5,7 @@ const VideoList = props => {
   const videoItems = props.videos.map(video => {
     // return a video list item and
     // pass it the video as prop name video
+    // L236: Add a key to each item to make it unique
     return <VideoListItem key={video.etag} video={video} />;
   });
 

@@ -303,3 +303,8 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 - React has a bunch of logic built into it to optimize the process of building a list
 - React builds a list and (under the hood) gives it a unique ID
 - For this instance, we could use YT search result's etag as key.
+
+**Lecture 237: Video List Items**
+
+- Use Bootstrap codes to format the resulting list of items
+- Use JS to get search results -- _const imageUrl = video.snippet.thumbnails.default.url;_
