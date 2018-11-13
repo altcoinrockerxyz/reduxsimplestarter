@@ -6,7 +6,14 @@ const VideoList = props => {
     // return a video list item and
     // pass it the video as prop name video
     // L236: Add a key to each item to make it unique
-    return <VideoListItem key={video.etag} video={video} />;
+    // L240: onVideoSelect
+    return (
+      <VideoListItem
+        onVideoSelect={props.onVideoSelect}
+        key={video.etag}
+        video={video}
+      />
+    );
   });
 
   // L234: values will arrive as an argument to this function

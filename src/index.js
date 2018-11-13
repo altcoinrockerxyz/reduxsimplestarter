@@ -50,18 +50,24 @@ const App = () => {
 // L233: Redefine const into class and extend (extends) Component
 // Going from functional to a class based component
 class App extends Component {
-  // L233: Setup the Constructor
+  // L233: Setup the Constructor (App boots up)
   constructor(props) {
     super(props);
 
     // L233: Result is an array
-    this.state = { videos: [] };
+    this.state = {
+      videos: [],
+      selectedVideo: null // L240
+    };
 
     // L233: Get some data pop up right away, move YTSearch in here
     YTSearch({ key: API_KEY, term: "surfboards" }, videos => {
       // (videos) => is the same as function(videos)
       // console.log(data); Update this.state with a new list of videos
-      this.setState({ videos });
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0] // L240
+      });
       // ^ line is the same as this.setState({ videos: videos });
     });
   }
@@ -69,12 +75,17 @@ class App extends Component {
   // L233: Add a render method
   // render the search bar via this JSX tag
   // L234: render video list via a JSX tag, pass data much like passing props in React
+  // L40: onVideoSelect, passing a function that manipulates another component
+  // updates app state with a new video
   render() {
     return (
       <div>
         <SearchBar />
-        <VideoDetail video={this.state.videos[0]} />
-        <VideoList videos={this.state.videos} />
+        <VideoDetail video={this.state.selectedVideo} />
+        <VideoList
+          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
+          videos={this.state.videos}
+        />
       </div> // this HTML stuff is called JSX
     );
   }

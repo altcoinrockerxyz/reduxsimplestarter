@@ -320,3 +320,8 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 
 - React renders instantly and getting result of a query doesn't get processed faster than the time it renders.
 - So there's a need to place a checker.
+
+**Lecture 240: Video Selection**
+
+- Goal 1: Clicking a video on the list will play the video on the screen.
+- Goal 2: Implement our callback - a function that's gonna be passed from app to video list and finally into the video list item.
