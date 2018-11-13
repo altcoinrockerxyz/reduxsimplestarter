@@ -13,6 +13,9 @@ import SearchBar from "./components/search_bar";
 // L234: Import video_list.js
 import VideoList from "./components/video_list";
 
+// L238: Import video detail
+import VideoDetail from "./components/video_detail";
+
 // L224: Declare a variable to hold the API Key
 const API_KEY = "AIzaSyA-svHXpb-3lJEZD15Q6rKNbAifXHkEsQg";
 
@@ -70,6 +73,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        <VideoDetail video={this.state.videos[0]} />
         <VideoList videos={this.state.videos} />
       </div> // this HTML stuff is called JSX
     );

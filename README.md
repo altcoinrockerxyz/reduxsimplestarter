@@ -315,3 +315,8 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 - Do I expect this component to need to maintain any type of state?
 - We only need the YouTube embed.
 - Whenever we embed YT video, the only thing that changes in the URL is the actual ID of the video.
+
+**Lecture 239: Handling Null Props**
+
+- React renders instantly and getting result of a query doesn't get processed faster than the time it renders.
+- So there's a need to place a checker.

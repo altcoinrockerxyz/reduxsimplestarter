@@ -1,6 +1,11 @@
 import React from "react";
 
 const VideoDetail = ({ video }) => {
+  // L239: Add a checker
+  if (!video) {
+    return <div>Loading...</div>;
+  }
+
   const videoId = video.id.videoId;
   const url = `https://www.youtube.com/embed/${videoId}`;
   // ES6 uses back ticks instead of quotes and + and then variable
