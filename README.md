@@ -308,3 +308,10 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 
 - Use Bootstrap codes to format the resulting list of items
 - Use JS to get search results -- _const imageUrl = video.snippet.thumbnails.default.url;_
+
+**Lecture 238: Detail Component and Template String**
+
+- This focuses on the video detail component, so users can see the selected video and play it.
+- Do I expect this component to need to maintain any type of state?
+- We only need the YouTube embed.
+- Whenever we embed YT video, the only thing that changes in the URL is the actual ID of the video.
