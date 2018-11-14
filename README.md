@@ -325,3 +325,7 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 
 - Goal 1: Clicking a video on the list will play the video on the screen.
 - Goal 2: Implement our callback - a function that's gonna be passed from app to video list and finally into the video list item.
+
+**Lecture 241: Styling with CSS**
+
+- style.css at style folder
