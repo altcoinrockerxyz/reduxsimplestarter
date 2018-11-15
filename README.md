@@ -329,3 +329,10 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 **Lecture 241: Styling with CSS**
 
 - style.css at style folder
+
+**Lecture 242: Searching for Videos**
+
+- Hook up the search bar by passing a callback down into the search bar.
+- Search bar will take a string (search term) and make a new YT search.
+- This will then set the state of the list of videos
+- Step1: Define a callback at index.js

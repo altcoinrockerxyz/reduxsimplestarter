@@ -63,15 +63,22 @@ class SearchBar extends Component {
   }*/
 
   // L229
+  // L242: onChange={event => this.setState({ term: event.target.value })}
   render() {
     return (
       <div className="search-bar">
         <input
           value={this.state.term}
-          onChange={event => this.setState({ term: event.target.value })}
+          onChange={event => this.onInputChange(event.target.value)}
         />
       </div>
     ); // L227: Pass the result of the event handler
+  }
+
+  // L242: move out the callback codes in render (L229) into its separate event handler
+  onInputChange(term) {
+    this.setState({ term });
+    this.props.onSearchTermChange(term);
   }
 }
 

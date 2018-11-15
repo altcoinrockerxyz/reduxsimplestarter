@@ -60,6 +60,13 @@ class App extends Component {
       selectedVideo: null // L240
     };
 
+    this.videoSearch("surfboards"); // L242: call the processes within videoSearch method,
+    // which are the same syntax that were initially coded in this area.
+  }
+
+  // L242: create a new method
+  videoSearch(term) {
+    // move the initial search (L233) into this method
     // L233: Get some data pop up right away, move YTSearch in here
     YTSearch({ key: API_KEY, term: "surfboards" }, videos => {
       // (videos) => is the same as function(videos)
@@ -80,7 +87,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
