@@ -1,3 +1,6 @@
+// L243: import lodash
+import _ from "lodash";
+
 import React, { Component } from "react"; // give me access to React,
 // which is installed in our dependencies library
 // L233: Import Component
@@ -68,7 +71,7 @@ class App extends Component {
   videoSearch(term) {
     // move the initial search (L233) into this method
     // L233: Get some data pop up right away, move YTSearch in here
-    YTSearch({ key: API_KEY, term: "surfboards" }, videos => {
+    YTSearch({ key: API_KEY, term: term }, videos => {
       // (videos) => is the same as function(videos)
       // console.log(data); Update this.state with a new list of videos
       this.setState({
@@ -85,9 +88,15 @@ class App extends Component {
   // L40: onVideoSelect, passing a function that manipulates another component
   // updates app state with a new video
   render() {
+    // L243: initialize videoSearch variable and pass on the value of term
+    // in order to delay calling of the function (300 milliseconds in this instance)
+    const videoSearch = _.debounce(term => {
+      this.videoSearch(term);
+    }, 300);
+
     return (
       <div>
-        <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+        <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({ selectedVideo })}

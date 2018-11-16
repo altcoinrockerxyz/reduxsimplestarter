@@ -336,3 +336,8 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 - Search bar will take a string (search term) and make a new YT search.
 - This will then set the state of the list of videos
 - Step1: Define a callback at index.js
+
+**Lecture 243: Throttling Search Term Input**
+
+- Reduce the refresh rate for loading results (via installation of Lodash)
+- Run npm install --save lodash
