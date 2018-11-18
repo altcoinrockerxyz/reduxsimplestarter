@@ -341,3 +341,27 @@ array.map(function(number) { return '<div>' + number + '</div>'} );
 
 - Reduce the refresh rate for loading results (via installation of Lodash)
 - Run npm install --save lodash
+
+**Lecture 244: Wrap up**
+
+Key Concepts:
+
+1.  The difference between a class-based components and functional components
+
+- A class is used whenever we want to have the concept of State in our component
+- We can use functional components (i.e. VideoList) whenever we have a simple component that just takes some number of properties and returns some amount of static JSX.
+
+2.  What is State?
+
+- State is initialized inside of our constructor, there's no special function to do it.
+- Whenever we change our state, the component instantly re-renders along with any children that the component contains as well.
+
+3.  Use of import statements and export statements.
+
+- Whenever we have a file we're trying to require in or import in that we wrote, we give a relative path reference.. whereas whenever we use a library, we just get the name of the library.
+
+4.  How often do we use callbacks to manipulate our data.
+
+5.  The component level state
+
+\*\*Lecture 245:
